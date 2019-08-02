@@ -25,7 +25,7 @@ class App extends Component {
     }
 
   }
-
+/*
   componentDidMount = () => {
     const json = localStorage.getItem("recipes");
     const recipes = JSON.parse(json);
@@ -41,7 +41,7 @@ class App extends Component {
     }
 
   }
-
+*/
   render(){
     return (
       <div className="App">
