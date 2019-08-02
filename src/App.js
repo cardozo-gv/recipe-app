@@ -2,6 +2,7 @@ import React,{ Component } from 'react';
 import Form from './components/Form';
 import Recipes from './components/Recipes';
 import Header from './components/Header';
+import {recipesData} from './data.js';
 import './App.css';
 
 
@@ -16,7 +17,7 @@ class App extends Component {
     e.preventDefault();
     const api_call = await fetch(`https://www.food2fork.com/api/search?key=${API_KEY}&q=${recipeName}&count=10`);
     const data = await api_call.json();
-    console.log(data);
+    console.log(data.recipes);
     this.setState({recipes : data.recipes})
   }
 
@@ -28,7 +29,12 @@ class App extends Component {
 
   componentDidUpdate = () => {
     const recipes = JSON.stringify(this.state.recipes);
-    localStorage.setItem("recipes",recipes);
+    if(recipes !== undefined){
+      localStorage.setItem("recipes",recipes);
+    } else {
+      localStorage.setItem("recipes", recipesData);
+    }
+
   }
 
   render(){
