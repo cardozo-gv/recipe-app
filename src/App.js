@@ -18,6 +18,7 @@ class App extends Component {
     const api_call = await fetch(`https://www.food2fork.com/api/search?key=${API_KEY}&q=${recipeName}&count=10`);
     const data = await api_call.json();
     console.log(data.recipes);
+
     if(data !== undefined ){
       this.setState({recipes : data.recipes})
     }else{
@@ -25,23 +26,29 @@ class App extends Component {
     }
 
   }
-/*
+
   componentDidMount = () => {
     const json = localStorage.getItem("recipes");
-    const recipes = JSON.parse(json);
-    this.setState({recipes});
+    if(json !== null){
+      const recipes = JSON.parse(json);
+      this.setState({recipes});
+    }else{
+      this.setState({recipes : recipesData})
+    }
   }
 
   componentDidUpdate = () => {
     const recipes = JSON.stringify(this.state.recipes);
+    console.log("rec "+recipes);
+    /*
     if(recipes !== null){
       localStorage.setItem("recipes",recipes);
     } else {
       localStorage.setItem("recipes",JSON.stringify(recipesData));
-    }
-
+    }*/
+    localStorage.setItem("recipes",recipes);
   }
-*/
+
   render(){
     return (
       <div className="App">
