@@ -32,7 +32,7 @@ class App extends Component {
     if(recipes !== undefined){
       localStorage.setItem("recipes",recipes);
     } else {
-      localStorage.setItem("recipes", recipesData);
+      localStorage.setItem("recipes",JSON.stringify(recipesData));
     }
 
   }
