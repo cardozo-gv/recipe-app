@@ -1,11 +1,11 @@
 ### Page at: https://cardozo-gv.github.io/recipe-app/
 
 <br/> <br/> <br/>
-### Tutorial from youtube channel: Hamza Mirza
-## Title: Using APIs in React - Create a Recipe Application using React Router | React tutorial for beginners
-## url: https://www.youtube.com/watch?v=PbJt7-a2274&list=PLecbSgyz2F3oDY3KD0fzzIUYg9EwdtYLq&index=9&t=139s
+Tutorial from youtube channel: Hamza Mirza <br/>
+Title: Using APIs in React - Create a Recipe Application using React Router | React tutorial for beginner <br/>
+url: https://www.youtube.com/watch?v=PbJt7-a2274&list=PLecbSgyz2F3oDY3KD0fzzIUYg9EwdtYLq&index=9&t=139s <br/>
 
-### API
+API
 http://www.food2fork.com/about/api
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
